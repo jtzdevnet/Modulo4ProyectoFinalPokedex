@@ -1,0 +1,146 @@
+.modal {
+  transition: 0.15s ease opacity;
+  width: 900px;
+  height: auto;
+  max-height: 60%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+.modal .modal-dialog {
+  padding: 15px;
+}
+.modal .modal-dialog .modal-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .modal-dialog .modal-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.modal .modal-dialog .modal-header .btn-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #cfcfcf;
+  color: black;
+  border: 0;
+  cursor: pointer;
+}
+.modal .modal-dialog .modal-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+.modal .modal-dialog .modal-content > * {
+  width: 100%;
+}
+.modal.open {
+  display: block;
+}
+.modal.show {
+  opacity: 1;
+  -webkit-animation: openingModal 0.5s ease;
+  -moz-animation: openingModal 0.5s ease;
+  animation: openingModal 0.5s ease;
+}
+.modal.closing {
+  -webkit-animation: closingModal 0.3s ease;
+  -moz-animation: closingModal 0.3s ease;
+  animation: closingModal 0.3s ease;
+}
+.modal-overlay {
+  transition: 0.3s ease opacity;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 997;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal-overlay.open {
+  display: block;
+}
+.modal-overlay.show {
+  opacity: 1;
+}
+.modal-button{
+    cursor: pointer;
+}
+@-webkit-keyframes openingModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px) perspective(600px) rotateX(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) perspective(600px) rotateX(0);
+  }
+}
+@-moz-keyframes openingModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px) perspective(600px) rotateX(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) perspective(600px) rotateX(0);
+  }
+}
+@keyframes openingModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px) perspective(600px) rotateX(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) perspective(600px) rotateX(0);
+  }
+}
+@-webkit-keyframes closingModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@-moz-keyframes closingModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes closingModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}

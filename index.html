@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - Proyecto Final Modulo 4</title>
+    <meta name="author" content="Jose Arturo Talamantes Zuñiga" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container">
+        <h1>Pokedex - Proyecto Final - Modulo 4</h1>
+    </header>
+    <div class="container">
+        <div class="pokedex_ui">
+            <div class="pokemon-main-name-wrap">
+                <h3 id="pokemon-main-name">Arturo's Pokedex</h3>
+            </div>
+            <div class="pokemon-image-window">
+                <img id="pokemon-main-image" src="/images/placeholder.png" alt="Placeholder">
+            </div>
+            <div class="pokemon-more-info">
+                <a class="pokemon-more-info-button modal-button" data-bs-target="#pokemonModal" data-bs-pokemon-id="">Ver Información</a>
+            </div>
+            <h5 id="filtered-by-text"></h5>
+            <div class="pokemon-list-wrap">
+                <ul id="pokemon-list"></ul>
+            </div>
+            <div class="pokemon-search">
+                <form>
+                    <input type="text" name="pokemon_name_search" id="pokemon_name_search">
+                    <span>
+                        <img src="images/search.svg" alt="Search Icon">
+                    </span>
+                </form>
+                <div class="pokemon-type-filters">
+                    <h5>Filtrar por tipo:</h5>
+                    <ul>
+                        <li><a class="filter-btn bg-bug" href="#">Bug</a></li>
+                        <li><a class="filter-btn bg-dark" href="#">Dark</a></li>
+                        <li><a class="filter-btn bg-dragon" href="#">Dragon</a></li>
+                        <li><a class="filter-btn bg-electric" href="#">Electric</a></li>
+                        <li><a class="filter-btn bg-fairy" href="#">Fairy</a></li>
+                        <li><a class="filter-btn bg-fighting" href="#">Fighting</a></li>
+                        <li><a class="filter-btn bg-fire" href="#">Fire</a></li>
+                        <li><a class="filter-btn bg-flying" href="#">Flying</a></li>
+                        <li><a class="filter-btn bg-ghost" href="#">Ghost</a></li>
+                        <li><a class="filter-btn bg-grass" href="#">Grass</a></li>
+                        <li><a class="filter-btn bg-ground" href="#">Ground</a></li>
+                        <li><a class="filter-btn bg-ice" href="#">Ice</a></li>
+                        <li><a class="filter-btn bg-normal" href="#">Normal</a></li>
+                        <li><a class="filter-btn bg-poison" href="#">Poison</a></li>
+                        <li><a class="filter-btn bg-psychic" href="#">Psychic</a></li>
+                        <li><a class="filter-btn bg-rock" href="#">Rock</a></li>
+                        <li><a class="filter-btn bg-steel" href="#">Steel</a></li>
+                        <li><a class="filter-btn bg-water" href="#">Water</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="pokemonModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Proyecto Pokedex - v0.1</h2>
+                    <button type="button" class="btn-close modal-close">X</button>
+                </div>
+                <div class="modal-body">
+                    <p>Proyecto final modulo 4 - Crear un Pokedex utilizando fetch.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn modal-close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
