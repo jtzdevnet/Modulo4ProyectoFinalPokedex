@@ -2,7 +2,7 @@ let pokemon_array;
 let global_pokemon;
 
 fetch(
-  "../js/pokemons.json",
+  "/js/pokemons.json",
   { method: 'GET' })
   .then((response) => response.json())
   .then(function(data){
